@@ -1,0 +1,19 @@
+{
+  "name": "@higherme-ui/tokens",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "lint": "eslint src --ext .ts,.tsx --fix"
+  },
+  "devDependencies": {
+    "@higherme-ui/ts-config": "*",
+    "@higherme-ui/eslint-config": "*",
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.4"
+  }
+}
