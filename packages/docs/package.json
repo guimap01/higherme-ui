@@ -20,12 +20,14 @@
     "storybook": "^7.0.7"
   },
   "dependencies": {
+    "@higherme-ui/eslint-config": "*",
     "@higherme-ui/react": "*",
     "@higherme-ui/tokens": "*",
-    "@higherme-ui/eslint-config": "*"
+    "polished": "^4.2.2",
+    "react-docgen-typescript": "^2.2.2"
   },
   "scripts": {
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "dev": "storybook dev -p 6006",
+    "build": "storybook build"
   }
 }

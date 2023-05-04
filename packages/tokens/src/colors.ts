@@ -6,12 +6,12 @@ export const colors = {
   blue10: '#EAEDFD',
   blue5: '#F5F6FE',
 
-  cyan10: '#EAFAFD',
   cyan100: '#2EC7E6',
-  cyan25: '#CBF1F9',
-  cyan5: '#F5FDFE',
-  cyan50: '#97E3F3',
   cyan75: '#63D6ED',
+  cyan50: '#97E3F3',
+  cyan25: '#CBF1F9',
+  cyan10: '#EAFAFD',
+  cyan5: '#F5FDFE',
 
   green200: '#00AB55',
   green100: '#2EE68A',

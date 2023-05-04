@@ -9,7 +9,7 @@ const StyledSwitchRoot = styled(Switch.Root, {
   borderRadius: '$full',
   position: 'relative',
   border: '1px solid $blue25',
-  '[data-state="checked"] &': {
+  '&[data-state="checked"] ': {
     backgroundColor: '$green10',
     border: '1px solid $green200',
   },
@@ -24,7 +24,7 @@ const StyledSwitchThumb = styled(Switch.Thumb, {
   transition: 'transform 100ms',
   transform: 'translateX(-4px)',
   willChange: 'transform',
-  '[data-state="checked"] &': {
+  '&[data-state="checked"] ': {
     transform: 'translateX(18px)',
     backgroundColor: '$green200',
   },
