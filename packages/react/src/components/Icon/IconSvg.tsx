@@ -184,6 +184,8 @@ const iconTypes = (color: string) => ({
   xEye: <XEye color={color} />,
 });
 
+export type IconNames = keyof typeof viewBoxObj;
+
 type IconSvg = {
   className?: string;
   name: keyof typeof viewBoxObj;
@@ -205,6 +207,7 @@ export const IconSvg = ({
   width,
   opacity,
 }: IconSvg) => {
+  console.log('name', name);
   return (
     <svg
       className={className}

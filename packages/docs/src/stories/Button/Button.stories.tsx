@@ -1,38 +1,32 @@
-import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from '@higherme-ui/react';
+import { Meta, StoryObj } from '@storybook/react';
 
-export default {
-  title: 'Components/Button',
+const meta: Meta<typeof Button> = {
   component: Button,
+  tags: ['autodocs'],
+};
+
+export default meta;
+
+type Story = StoryObj<typeof Button>;
+
+export const Primary: Story = {
   args: {
-    children: 'Text',
-    disabled: false,
     variant: 'primary',
-  },
-  argTypes: {
-    children: {
-      control: 'text',
-    },
-    disabled: {
-      control: 'boolean',
-    },
-    variant: {
-      control: 'select',
-      options: ['primary', 'secondary-white', 'secondary-blue'],
-    },
-  },
-} as Meta;
-
-export const Primary: StoryObj = {};
-
-export const SecondaryWhite: StoryObj = {
-  args: {
-    variant: 'secondary-white',
+    children: 'Primary',
   },
 };
 
-export const SecondaryBlue: StoryObj = {
+export const SecondaryWhite: Story = {
+  args: {
+    variant: 'secondary-white',
+    children: 'Secondary White',
+  },
+};
+
+export const SecondaryBlue: Story = {
   args: {
     variant: 'secondary-blue',
+    children: 'Secondary Blue',
   },
 };

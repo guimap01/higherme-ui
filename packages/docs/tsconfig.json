@@ -3,7 +3,7 @@
     "composite": false,
     "declaration": true,
     "declarationMap": true,
-    "esModuleInterop": true,
+    "esModuleInterop": false,
     "forceConsistentCasingInFileNames": true,
     "inlineSources": false,
     "isolatedModules": true,
@@ -16,7 +16,8 @@
     "jsx": "react-jsx",
     "lib": ["dom", "ES2015"],
     "module": "ESNext",
-    "target": "es6"
+    "target": "es6",
+    "allowSyntheticDefaultImports": false,
   },
   "exclude": ["node_modules"]
 }

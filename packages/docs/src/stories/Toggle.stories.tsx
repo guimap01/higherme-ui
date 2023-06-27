@@ -1,9 +1,11 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta } from '@storybook/react';
 import { Toggle } from '@higherme-ui/react';
 
-export default {
-  title: 'Toggle',
+const meta: Meta<typeof Toggle> = {
   component: Toggle,
-} as Meta;
+  tags: ['autodocs'],
+};
 
-export const Default: StoryObj = {};
+export default meta;
+
+export const Default = {};

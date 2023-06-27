@@ -1,23 +1,23 @@
 /** @type { import('@storybook/react-webpack5').StorybookConfig } */
 const config = {
-  stories: ['../src/stories/**/*.stories.@(js|jsx|ts|tsx)', '../src/**/*.mdx'],
-  addons: [
-    '@storybook/addon-links',
-    '@storybook/addon-essentials',
-    '@storybook/addon-interactions',
+  stories: [
+    '../src/stories/home.stories.mdx',
+    '../src/stories/**/*.stories.@(js|jsx|ts|tsx)',
+    '../src/**/*.mdx',
   ],
+  addons: ['@storybook/addon-essentials'],
   framework: {
     name: '@storybook/react-webpack5',
     options: {},
   },
   docs: {
-    autodocs: false,
+    autodocs: 'tag',
+    defaultName: 'Documentation',
   },
   typescript: {
-    reactDocgen: 'react-docgen-typescript',
+    reactDocgen: 'react-docgen-typescript-plugin',
     reactDocgenTypescriptOptions: {
       shouldExtractLiteralValuesFromEnum: true,
-      extends: '../tsconfig.json',
     },
   },
 };
