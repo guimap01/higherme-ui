@@ -207,7 +207,6 @@ export const IconSvg = ({
   width,
   opacity,
 }: IconSvg) => {
-  console.log('name', name);
   return (
     <svg
       className={className}

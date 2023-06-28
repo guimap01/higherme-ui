@@ -5,6 +5,7 @@ const config = {
     '../src/stories/**/*.stories.@(js|jsx|ts|tsx)',
     '../src/**/*.mdx',
   ],
+  staticDirs: ['../public'],
   addons: ['@storybook/addon-essentials'],
   framework: {
     name: '@storybook/react-webpack5',

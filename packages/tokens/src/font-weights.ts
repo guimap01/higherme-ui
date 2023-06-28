@@ -1,4 +1,5 @@
 export const fontWeights = {
+  huge: 800,
   bold: 700,
   semiBold: 600,
   medium: 500,
