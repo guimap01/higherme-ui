@@ -8,4 +8,4 @@ export const radii = {
   xl: '24px',
   xxl: '32px',
   full: '9999px',
-}
+};

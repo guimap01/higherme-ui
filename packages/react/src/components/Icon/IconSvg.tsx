@@ -186,6 +186,8 @@ const iconTypes = (color: string) => ({
 
 export type IconNames = keyof typeof viewBoxObj;
 
+export const iconNames = Object.keys(viewBoxObj) as IconNames[];
+
 type IconSvg = {
   className?: string;
   name: keyof typeof viewBoxObj;

@@ -33,6 +33,7 @@ type TagProps = {
   rightIconName?: IconNames;
   leftIconColor?: keyof typeof colors;
   rightIconColor?: keyof typeof colors;
+  style?: React.CSSProperties;
 };
 
 export const Tag = ({
@@ -45,11 +46,13 @@ export const Tag = ({
   rightIconName,
   leftIconColor,
   rightIconColor,
+  style,
 }: TagProps) => {
   return (
     <TagContainer
       style={{
         backgroundColor: colors[backgroundColor],
+        ...style,
       }}
       small={small}
       clickable={clickable}
