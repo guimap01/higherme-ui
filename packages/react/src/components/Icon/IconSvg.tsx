@@ -191,7 +191,7 @@ export const iconNames = Object.keys(viewBoxObj) as IconNames[];
 type IconSvg = {
   className?: string;
   name: keyof typeof viewBoxObj;
-  color: keyof typeof colors;
+  color?: keyof typeof colors;
   height?: number;
   width?: number;
   style?: React.CSSProperties;
@@ -202,7 +202,7 @@ type IconSvg = {
 export const IconSvg = ({
   name,
   className,
-  color,
+  color = 'blue100',
   height,
   style,
   viewBox,

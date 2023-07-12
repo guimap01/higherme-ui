@@ -31,9 +31,6 @@ export function Select<
   IsMulti extends boolean = false,
   Group extends GroupBase<Option> = GroupBase<Option>
 >(props: SelectProps<Option, IsMulti, Group>) {
-  // setTimeout(() => {
-  //   debugger;
-  // }, 1000);
   return (
     <ReactSelect
       placeholder=""

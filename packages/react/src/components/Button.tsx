@@ -1,3 +1,4 @@
+import { forwardRef } from 'react';
 import { styled } from '../styles';
 
 const StyledButton = styled('button', {
@@ -8,6 +9,8 @@ const StyledButton = styled('button', {
   fontFamily: '$default',
   fontWeight: '$bold',
   cursor: 'pointer',
+  display: 'flex',
+  alignItems: 'center',
   svg: {
     marginRight: '$2',
   },
@@ -54,24 +57,54 @@ const StyledButton = styled('button', {
         },
       },
     },
+    small: {
+      true: {
+        padding: '$2 $4',
+        borderRadius: '$md',
+      },
+    },
+    rounded: {
+      true: {
+        borderRadius: '$full',
+      },
+    },
   },
 });
 
-type ButtonProps = React.ComponentProps<typeof StyledButton> & {
+export type ButtonProps = React.ComponentProps<typeof StyledButton> & {
   icon?: React.ReactNode;
   variant?: 'primary' | 'secondary-white' | 'secondary-blue';
+  small?: boolean;
+  rounded?: boolean;
 };
 
-export const Button = ({
-  icon,
-  children,
-  variant = 'primary',
-  ...rest
-}: ButtonProps) => {
-  return (
-    <StyledButton {...rest} variant={variant}>
-      {icon}
-      {children}
-    </StyledButton>
-  );
-};
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ icon, children, variant = 'primary', small, rounded, ...rest }, ref) => {
+    return (
+      <StyledButton
+        {...rest}
+        small={small}
+        rounded={rounded}
+        variant={variant}
+        ref={ref}
+      >
+        {icon}
+        {children}
+      </StyledButton>
+    );
+  }
+);
+
+export const IconButton = styled('button', {
+  all: 'unset',
+  fontFamily: 'inherit',
+  borderRadius: '100%',
+  height: '$5',
+  width: '$5',
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  color: '$gray50',
+  backgroundColor: 'transparent',
+  cursor: 'pointer',
+});
