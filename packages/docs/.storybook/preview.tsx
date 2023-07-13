@@ -27,7 +27,6 @@ const preview = {
           <Subtitle />
           <Description />
           <Stories />
-          <ArgsTable />
           <ArgTypes />
         </>
       ),
