@@ -33,7 +33,7 @@ const IconSvgStory = () => (
 );
 
 const meta: Meta = {
-  title: 'IconSvg',
+  title: 'Components/IconSvg',
   component: IconSvgStory,
   tags: ['autodocs'],
 };

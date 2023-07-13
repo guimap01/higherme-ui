@@ -4,6 +4,7 @@ import { Meta } from '@storybook/react';
 
 const meta: Meta<typeof DropdownStory> = {
   component: DropdownStory,
+  title: 'Components/Dropdown',
   tags: ['autodocs'],
 };
 

@@ -2,9 +2,26 @@ import { Select } from '@higherme-ui/react';
 import { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta = {
-  title: 'Select',
   component: Select,
+  title: 'Components/Select',
   tags: ['autodocs'],
+  argTypes: {
+    options: {
+      defaultValue: [],
+      description: 'The options of the select',
+    },
+    isMulti: {
+      defaultValue: false,
+      description: 'If true, the select will be multi-select',
+    },
+    children: {
+      description: 'The content of the select',
+    },
+    showCheckbox: {
+      defaultValue: false,
+      description: 'If true, the select will show checkbox',
+    },
+  },
 };
 
 export default meta;

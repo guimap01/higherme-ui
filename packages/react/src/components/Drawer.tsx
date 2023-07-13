@@ -5,9 +5,36 @@ import { IconSvg } from './Icon/IconSvg';
 import { Typography } from './Typography';
 
 type DrawerProps = {
+  /**
+   * The position of the drawer
+   * @default right
+   */
   position?: 'right' | 'left';
+
+  /**
+   * The trigger of the drawer
+   * @example
+   * <Drawer trigger={<Button>Open Drawer</Button>}>...</Drawer>
+   * <Drawer trigger={<IconButton icon={<IconSvg name="menu" />} />}>...</Drawer>
+   * */
   trigger: React.ReactNode;
+
+  /**
+   * The content of the drawer
+   * @example
+   * <Drawer trigger={<Button>Open Drawer</Button>}>
+   *  <Typography.Body>Drawer Content</Typography.Body>
+   * </Drawer>
+   * */
   children: React.ReactNode;
+
+  /**
+   * The title of the drawer
+   * @example
+   * <Drawer trigger={<Button>Open Drawer</Button>} title="Drawer Title">
+   * <Typography.Body>Drawer Content</Typography.Body>
+   * </Drawer>
+   * */
   title: string;
 };
 
@@ -23,10 +50,10 @@ export const Drawer = ({
       <StyledDrawerOverlay>
         <StyledDrawerContent position={position}>
           <StyledDrawerHeader>
-            <Typography.TitleMedium>{title}</Typography.TitleMedium>
+            <Typography.TitleSmall>{title}</Typography.TitleSmall>
           </StyledDrawerHeader>
           <StyledDrawerContainer>{children}</StyledDrawerContainer>
-          <RadixDialog.Close asChild>
+          <RadixDialog.Close asChild aria-label="drawer-close-button">
             <StyledIconButton>
               <IconSvg name="close" width={12} height={12} color="black" />
             </StyledIconButton>

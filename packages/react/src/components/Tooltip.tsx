@@ -4,7 +4,20 @@ import { keyframes, styled } from '../styles';
 import { IconButton } from './Button';
 
 type TooltipProps = {
+  /**
+   * The content of the tooltip
+   * @example
+   * <Tooltip content="Tooltip Content" />
+   * */
   content: string;
+
+  /**
+   * The children of the tooltip
+   * @example
+   * <Tooltip content="Tooltip Content">
+   * <Button>Hover Me</Button>
+   * </Tooltip>
+   * */
   children?: React.ReactNode;
 };
 

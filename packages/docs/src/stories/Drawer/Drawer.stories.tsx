@@ -3,7 +3,23 @@ import { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof Drawer> = {
   component: Drawer,
+  title: 'Components/Drawer',
   tags: ['autodocs'],
+  argTypes: {
+    position: {
+      defaultValue: 'right',
+      description: 'The position of the drawer',
+    },
+    trigger: {
+      description: 'The trigger of the drawer',
+    },
+    children: {
+      description: 'The content of the drawer',
+    },
+    title: {
+      description: 'The title of the drawer',
+    },
+  },
 };
 
 export default meta;

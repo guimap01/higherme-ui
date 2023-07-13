@@ -2,6 +2,17 @@ import * as Switch from '@radix-ui/react-switch';
 import { styled } from '../styles';
 import { forwardRef } from 'react';
 
+export const Toggle = forwardRef<
+  React.ElementRef<typeof StyledSwitchRoot>,
+  React.ComponentProps<typeof StyledSwitchRoot>
+>((props, forwardedRef) => {
+  return (
+    <StyledSwitchRoot {...props} ref={forwardedRef}>
+      <StyledSwitchThumb />
+    </StyledSwitchRoot>
+  );
+});
+
 const StyledSwitchRoot = styled(Switch.Root, {
   width: '$12',
   height: '$6',
@@ -28,15 +39,4 @@ const StyledSwitchThumb = styled(Switch.Thumb, {
     transform: 'translateX(18px)',
     backgroundColor: '$green200',
   },
-});
-
-export const Toggle = forwardRef<
-  React.ElementRef<typeof StyledSwitchRoot>,
-  React.ComponentProps<typeof StyledSwitchRoot>
->((props, forwardedRef) => {
-  return (
-    <StyledSwitchRoot {...props} ref={forwardedRef}>
-      <StyledSwitchThumb />
-    </StyledSwitchRoot>
-  );
 });

@@ -5,7 +5,13 @@ const TextBody = Typography.TextBody;
 
 const meta: Meta<typeof TextBody> = {
   component: Typography.TextBody,
+  title: 'Components/Typography',
   tags: ['autodocs'],
+  argTypes: {
+    children: {
+      description: 'The content of the text',
+    },
+  },
 };
 
 const Container = ({ children }: { children: React.ReactNode }) => (
@@ -88,76 +94,6 @@ export const TextCaption = {
   render: () => (
     <Container>
       <Typography.TextCaption>TextCaption</Typography.TextCaption>
-    </Container>
-  ),
-};
-
-export const MobileTitleHuge = {
-  render: () => (
-    <Container>
-      <Typography.MobileTitleHuge>MobileTitleHuge</Typography.MobileTitleHuge>
-    </Container>
-  ),
-};
-
-export const MobileTitleBig = {
-  render: () => (
-    <Container>
-      <Typography.MobileTitleBig>MobileTitleBig</Typography.MobileTitleBig>
-    </Container>
-  ),
-};
-
-export const MobileTitleMedium = {
-  render: () => (
-    <Container>
-      <Typography.MobileTitleMedium>
-        MobileTitleMedium
-      </Typography.MobileTitleMedium>
-    </Container>
-  ),
-};
-
-export const MobileTitleSmall = {
-  render: () => (
-    <Container>
-      <Typography.MobileTitleSmall>
-        MobileTitleSmall
-      </Typography.MobileTitleSmall>
-    </Container>
-  ),
-};
-
-export const MobileTitleTiny = {
-  render: () => (
-    <Container>
-      <Typography.MobileTitleTiny>MobileTitleTiny</Typography.MobileTitleTiny>
-    </Container>
-  ),
-};
-
-export const MobileTextLead = {
-  render: () => (
-    <Container>
-      <Typography.MobileTextLead>MobileTextLead</Typography.MobileTextLead>
-    </Container>
-  ),
-};
-
-export const MobileTextLink = {
-  render: () => (
-    <Container>
-      <Typography.MobileTextLink>MobileTextLink</Typography.MobileTextLink>
-    </Container>
-  ),
-};
-
-export const MobileTextCaption = {
-  render: () => (
-    <Container>
-      <Typography.MobileTextCaption>
-        MobileTextCaption
-      </Typography.MobileTextCaption>
     </Container>
   ),
 };

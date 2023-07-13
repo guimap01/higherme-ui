@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1689277475511" clover="3.2.0">
+  <project timestamp="1689277475511" name="All files">
+    <metrics statements="32" coveredstatements="32" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2" elements="36" coveredelements="35" complexity="0" loc="32" ncloc="32" packages="1" files="3" classes="3"/>
+    <file name="Button.tsx" path="/home/pedro/programacao/higherme-design-system/packages/react/src/components/Button.tsx">
+      <metrics statements="7" coveredstatements="7" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="81" count="1" type="stmt"/>
+      <line num="82" count="7" type="cond" truecount="0" falsecount="1"/>
+      <line num="83" count="7" type="stmt"/>
+      <line num="98" count="1" type="stmt"/>
+    </file>
+    <file name="Drawer.tsx" path="/home/pedro/programacao/higherme-design-system/packages/react/src/components/Drawer.tsx">
+      <metrics statements="12" coveredstatements="12" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="14" count="1" type="stmt"/>
+      <line num="20" count="3" type="stmt"/>
+      <line num="40" count="1" type="stmt"/>
+      <line num="52" count="1" type="stmt"/>
+      <line num="65" count="1" type="stmt"/>
+      <line num="71" count="1" type="stmt"/>
+      <line num="77" count="1" type="stmt"/>
+    </file>
+    <file name="Typography.tsx" path="/home/pedro/programacao/higherme-design-system/packages/react/src/components/Typography.tsx">
+      <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="13" count="1" type="stmt"/>
+      <line num="25" count="1" type="stmt"/>
+      <line num="37" count="1" type="stmt"/>
+      <line num="49" count="1" type="stmt"/>
+      <line num="60" count="1" type="stmt"/>
+      <line num="72" count="1" type="stmt"/>
+      <line num="84" count="1" type="stmt"/>
+      <line num="96" count="1" type="stmt"/>
+      <line num="109" count="1" type="stmt"/>
+      <line num="121" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>

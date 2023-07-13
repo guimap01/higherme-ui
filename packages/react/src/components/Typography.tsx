@@ -1,137 +1,118 @@
-import { css, styled } from '@stitches/react';
+import { styled } from '../styles';
 
-const sharedTitleFontFamily = css({
+const sharedTitleFontFamily = {
   fontFamily: '$gilmer',
   margin: 0,
-});
+};
 
-const sharedBodyFontFamily = css({
+const sharedBodyFontFamily = {
   fontFamily: '$default',
   margin: 0,
-});
+};
 
 const TitleHuge = styled('h1', {
   ...sharedTitleFontFamily,
-  fontSize: '$huge',
+
+  fontSize: '$medium',
+  lineHeight: '$medium',
   fontWeight: '$huge',
-  lineHeight: '$huge',
+  '@media (min-width: 768px)': {
+    fontSize: '$huge',
+    lineHeight: '$huge',
+  },
 });
 
 const TitleBig = styled('h1', {
   ...sharedTitleFontFamily,
-  fontSize: '$big',
+
+  fontSize: '$small',
+  lineHeight: '$small',
   fontWeight: '$bold',
-  lineHeight: '$big',
+  '@media (min-width: 768px)': {
+    fontSize: '$big',
+    lineHeight: '$big',
+  },
 });
 
 const TitleMedium = styled('h1', {
   ...sharedTitleFontFamily,
-  fontSize: '$medium',
-  fontWeight: '$bold',
-  lineHeight: '$medium',
-});
 
-const TitleSmall = styled('h1', {
-  ...sharedTitleFontFamily,
-  fontSize: '$small',
-  fontWeight: '$bold',
-  lineHeight: '$small',
-});
-
-const TitleTiny = styled('h1', {
-  ...sharedTitleFontFamily,
   fontSize: '$tiny',
-  fontWeight: '$bold',
   lineHeight: '$tiny',
-});
-
-const TextLead = styled('p', {
-  ...sharedBodyFontFamily,
-  fontSize: '$lead',
-  fontWeight: '$light',
-  lineHeight: '$lead',
-});
-
-const TextBody = styled('p', {
-  ...sharedBodyFontFamily,
-  fontSize: '$body',
-  fontWeight: '$normal',
-  lineHeight: '$body',
-});
-
-const TextLink = styled('a', {
-  ...sharedBodyFontFamily,
-  fontSize: '$body',
   fontWeight: '$bold',
-  lineHeight: '$body',
-  textDecoration: 'none',
-});
-
-const TextCaption = styled('p', {
-  ...sharedBodyFontFamily,
-  fontSize: '$caption',
-  fontWeight: '$normal',
-  lineHeight: '$caption',
-});
-
-const MobileTitleHuge = styled(TitleHuge, {
-  '@bp1': {
+  '@media (min-width: 768px)': {
     fontSize: '$medium',
     lineHeight: '$medium',
   },
 });
 
-const MobileTitleBig = styled(TitleBig, {
-  '@bp1': {
+const TitleSmall = styled('h1', {
+  ...sharedTitleFontFamily,
+  fontSize: '$tiny',
+  lineHeight: '$mobileSmall',
+  fontWeight: '$bold',
+  '@media (min-width: 768px)': {
     fontSize: '$small',
     lineHeight: '$small',
   },
 });
 
-const MobileTitleMedium = styled(TitleMedium, {
-  '@bp1': {
+const TitleTiny = styled('h1', {
+  ...sharedTitleFontFamily,
+
+  fontSize: '$mobileTiny',
+  lineHeight: '$mobileTiny',
+  fontWeight: '$bold',
+  '@media (min-width: 768px)': {
     fontSize: '$tiny',
     lineHeight: '$tiny',
   },
 });
 
-const MobileTitleSmall = styled(TitleSmall, {
-  '@bp1': {
-    fontSize: '$tiny',
-    lineHeight: '$mobileSmall',
+const TextLead = styled('p', {
+  ...sharedBodyFontFamily,
+
+  fontSize: '$mobileLead',
+  lineHeight: '$mobileLead',
+  fontWeight: '$light',
+  '@media (min-width: 768px)': {
+    fontSize: '$lead',
+    lineHeight: '$lead',
   },
 });
 
-const MobileTitleTiny = styled(TitleTiny, {
-  '@bp1': {
-    fontSize: '$mobileTiny',
-    lineHeight: '$mobileTiny',
-  },
-});
+const TextBody = styled('p', {
+  ...sharedBodyFontFamily,
 
-const MobileTextLead = styled(TextLead, {
-  '@bp1': {
-    fontSize: '$mobileLead',
-    lineHeight: '$mobileLead',
-  },
-});
-
-const MobileTextBody = styled(TextBody, {
-  '@bp1': {
+  fontSize: '$body',
+  lineHeight: '$body',
+  fontWeight: '$normal',
+  '@media (min-width: 768px)': {
     fontSize: '$body',
     lineHeight: '$body',
   },
 });
 
-const MobileTextLink = styled(TextLink, {
-  '@bp1': {
+const TextLink = styled('a', {
+  ...sharedBodyFontFamily,
+
+  fontSize: '$body',
+  lineHeight: '$body',
+  fontWeight: '$bold',
+  textDecoration: 'none',
+  '@media (min-width: 768px)': {
     fontSize: '$body',
     lineHeight: '$body',
   },
 });
 
-const MobileTextCaption = styled(TextCaption, {
-  '@bp1': {
+const TextCaption = styled('p', {
+  ...sharedBodyFontFamily,
+
+  fontSize: '$caption',
+  lineHeight: '$caption',
+  fontWeight: '$normal',
+  '@media (min-width: 768px)': {
     fontSize: '$caption',
     lineHeight: '$caption',
   },
@@ -147,13 +128,4 @@ export const Typography = {
   TextBody,
   TextLink,
   TextCaption,
-  MobileTitleHuge,
-  MobileTitleBig,
-  MobileTitleMedium,
-  MobileTitleSmall,
-  MobileTitleTiny,
-  MobileTextLead,
-  MobileTextBody,
-  MobileTextLink,
-  MobileTextCaption,
 };

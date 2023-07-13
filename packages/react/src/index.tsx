@@ -10,3 +10,5 @@ export * from './components/Tooltip';
 export * from './components/Drawer';
 
 export * from './styles';
+
+export * from './helpers';

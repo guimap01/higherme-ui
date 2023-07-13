@@ -72,9 +72,26 @@ const StyledButton = styled('button', {
 });
 
 export type ButtonProps = React.ComponentProps<typeof StyledButton> & {
+  /** Icon to be rendered before the children */
   icon?: React.ReactNode;
+
+  /**
+   * The variant of the button
+   * @default primary
+   */
   variant?: 'primary' | 'secondary-white' | 'secondary-blue';
+
+  /**
+   * If true, the button will be small
+   * @default false
+   */
   small?: boolean;
+
+  /**
+   * If true, the button will be rounded
+   * @default false
+   *
+   */
   rounded?: boolean;
 };
 

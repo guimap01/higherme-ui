@@ -4,7 +4,24 @@ import { ReactNode } from 'react';
 
 const meta: Meta<typeof FloatingLabelInput> = {
   component: FloatingLabelInput,
+  title: 'Components/FloatingLabelInput',
   tags: ['autodocs'],
+  argTypes: {
+    label: {
+      description: 'The label of the input',
+    },
+    isOptional: {
+      defaultValue: false,
+      description: 'If true, the label will be optional',
+    },
+    disabled: {
+      defaultValue: false,
+      description: 'If true, the input will be disabled',
+    },
+    children: {
+      description: 'The content of the input',
+    },
+  },
 };
 
 export default meta;

@@ -3,6 +3,143 @@ import React, { InputHTMLAttributes, useState } from 'react';
 import { IconNames, IconSvg } from './Icon/IconSvg';
 import { colors } from '@higherme-ui/tokens';
 
+type InputProps = InputHTMLAttributes<HTMLInputElement>;
+
+type FloatingLabelInputProps = {
+  /**
+   * The label of the input
+   * @example
+   * <FloatingLabelInput label="Email" />
+   * */
+  label: string;
+
+  /**
+   * If true, the input will render a optional label, should be used with `optionalLabel`
+   * @default false
+   *
+   */
+  isOptional?: boolean;
+
+  /**
+   * The optional label of the input
+   * @example
+   * <FloatingLabelInput label="Email" isOptional optionalLabel="(Optional)" />
+   *
+   */
+  optionalLabel?: string;
+
+  /**
+   * If true, the input will render with the error style`
+   */
+  isInvalid?: boolean;
+
+  /**
+   * The error message of the input
+   * @example
+   * <FloatingLabelInput label="Email" isInvalid errorMessage="Invalid email" />
+   *
+   * */
+  errorMessage?: string;
+
+  /**
+   * The icon name of the input (from the icon library) should be used with `iconColor`
+   */
+  iconName?: IconNames;
+
+  /**
+   * The icon color of the input
+   * @default 'blue100'
+   *
+   * */
+  iconColor?: keyof typeof colors;
+
+  /**
+   * The icon height of the input
+   * @default 24
+   *
+   * */
+  iconHeight?: number;
+
+  /**
+   * The icon width of the input
+   * @default 24
+   * */
+  iconWidth?: number;
+} & InputProps;
+
+export const FloatingLabelInput = React.forwardRef<
+  HTMLInputElement,
+  FloatingLabelInputProps
+>(({ label, ...props }, ref) => {
+  const defaultInputId = `floating-label-input-${Math.random() * 1000}}`;
+
+  const [isFocused, setIsFocused] = useState(false);
+  const [hasValue, setHasValue] = useState(false);
+
+  const handleFocus = () => {
+    setIsFocused(true);
+  };
+
+  const handleBlur = () => {
+    setIsFocused(false);
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setHasValue(e.target.value.length > 0);
+    if (props.onChange) props.onChange(e);
+  };
+
+  const handleContainerClick = () => {
+    const input = document.getElementById(props.id || defaultInputId);
+    if (input) input.focus();
+  };
+
+  const shouldTranslate = isFocused || props.value || hasValue;
+
+  return (
+    <Wrapper>
+      <Container
+        onClick={handleContainerClick}
+        aria-disabled={props.disabled}
+        aria-invalid={props.isInvalid}
+        aria-has-icon={!!props.iconName}
+      >
+        {props.iconName && props.iconColor && (
+          <IconSvg
+            name={props.iconName}
+            color={props.iconColor}
+            height={props.iconHeight || 24}
+            width={props.iconWidth || 24}
+          />
+        )}
+        <Input
+          id={props.id || defaultInputId}
+          {...props}
+          onChange={handleChange}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
+          ref={ref}
+          aria-has-icon={!!props.iconName}
+        />
+        <Label
+          style={{
+            transform: shouldTranslate
+              ? 'translate(-2px, -18px) scale(1)'
+              : 'none',
+          }}
+          aria-disabled={props.disabled}
+          aria-open={shouldTranslate}
+          aria-invalid={props.isInvalid}
+          aria-has-icon={!!props.iconName}
+        >
+          {label} {props.isOptional && <span>({props.optionalLabel})</span>}
+        </Label>
+      </Container>
+      {props.errorMessage && <ErrorMessage>{props.errorMessage}</ErrorMessage>}
+    </Wrapper>
+  );
+});
+
 const Wrapper = styled('div', {
   fontFamily: '$default',
   display: 'flex',
@@ -103,90 +240,4 @@ const ErrorMessage = styled('span', {
   marginLeft: '$3',
   display: 'block',
   fontSize: '$caption',
-});
-
-type InputProps = InputHTMLAttributes<HTMLInputElement>;
-
-type FloatingLabelInputProps = {
-  label: string;
-  isOptional?: boolean;
-  isInvalid?: boolean;
-  errorMessage?: string;
-  iconName?: IconNames;
-  iconColor?: keyof typeof colors;
-  iconHeight?: number;
-  iconWidth?: number;
-} & InputProps;
-
-export const FloatingLabelInput = React.forwardRef<
-  HTMLInputElement,
-  FloatingLabelInputProps
->(({ label, ...props }, ref) => {
-  const defaultInputId = `floating-label-input-${Math.random() * 1000}}`;
-
-  const [isFocused, setIsFocused] = useState(false);
-  const [hasValue, setHasValue] = useState(false);
-
-  const handleFocus = () => {
-    setIsFocused(true);
-  };
-
-  const handleBlur = () => {
-    setIsFocused(false);
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setHasValue(e.target.value.length > 0);
-    if (props.onChange) props.onChange(e);
-  };
-
-  const handleContainerClick = () => {
-    const input = document.getElementById(props.id || defaultInputId);
-    if (input) input.focus();
-  };
-
-  const shouldTranslate = isFocused || props.value || hasValue;
-
-  return (
-    <Wrapper>
-      <Container
-        onClick={handleContainerClick}
-        aria-disabled={props.disabled}
-        aria-invalid={props.isInvalid}
-        aria-has-icon={!!props.iconName}
-      >
-        {props.iconName && props.iconColor && (
-          <IconSvg
-            name={props.iconName}
-            color={props.iconColor}
-            height={props.iconHeight || 24}
-            width={props.iconWidth || 24}
-          />
-        )}
-        <Input
-          id={props.id || defaultInputId}
-          {...props}
-          onChange={handleChange}
-          onFocus={handleFocus}
-          onBlur={handleBlur}
-          ref={ref}
-          aria-has-icon={!!props.iconName}
-        />
-        <Label
-          style={{
-            transform: shouldTranslate
-              ? 'translate(-2px, -18px) scale(1)'
-              : 'none',
-          }}
-          aria-disabled={props.disabled}
-          aria-open={shouldTranslate}
-          aria-invalid={props.isInvalid}
-          aria-has-icon={!!props.iconName}
-        >
-          {label} {props.isOptional && <span>(Optional)</span>}
-        </Label>
-      </Container>
-      {props.errorMessage && <ErrorMessage>{props.errorMessage}</ErrorMessage>}
-    </Wrapper>
-  );
 });
