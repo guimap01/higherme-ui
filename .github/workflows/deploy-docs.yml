@@ -22,4 +22,4 @@ jobs:
 
       - name: Deploy
         working-directory: ./packages/docs
-        run: yarn deploy-storybook -- --ci --existing-output-dir=storybook-static
+        run: yarn deploy-storybook -- --ci --host-token-env-variable=GITHUB_TOKEN --existing-output-dir=storybook-static
