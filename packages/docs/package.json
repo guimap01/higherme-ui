@@ -32,7 +32,5 @@
     "build": "storybook build",
     "build-storybook": "yarn build",
     "chromatic": "npx chromatic --build-script-name=build --project-token=chpt_8a7ab8263bb625f"
-  },
-  "readme": "ERROR: No README data found!",
-  "_id": "docs@1.0.0"
+  }
 }
