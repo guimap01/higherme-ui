@@ -60,4 +60,4 @@ By leveraging Storybook for documentation, we ensure that our component library 
 
 This component library, built with the libraries [@stitches/react](https://stitches.dev/), Radix UI, and react-select, aims to address the limitations of the current solution by enhancing type safety, documentation, and overall development experience. Through the use of these libraries, we can achieve consistent styling, accessibility, reusability, and improved usability, while providing comprehensive documentation using Storybook.
 
-By adopting this component library, we empower developers to build applications more efficiently, reduce cognitive load, and ensure a seamless and delightful user experience.
+By adopting this component library, we empower developers to build applications more efficiently, reduce cognitive load, and ensure a seamless and delightful user experience
