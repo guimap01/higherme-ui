@@ -5,7 +5,8 @@
   ],
   "scripts": {
     "dev": "turbo run dev --parallel",
-    "build": "turbo run build"
+    "build": "turbo run build",
+    "build-storybook": "cd packages/docs && yarn build-storybook"
   },
   "devDependencies": {
     "turbo": "^1.9.3"

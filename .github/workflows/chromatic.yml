@@ -19,4 +19,3 @@ jobs:
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           token: ${{ secrets.PERSONAL_TOKEN }}
-          workingDir: ./packages/docs
