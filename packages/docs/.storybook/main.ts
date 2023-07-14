@@ -22,12 +22,5 @@ const config: StorybookConfig = {
       shouldExtractLiteralValuesFromEnum: true,
     },
   },
-  webpackFinal: async (config, { configType }) => {
-    if (configType === 'PRODUCTION') {
-      // @ts-ignore
-      config.output.publicPath = '/higherme-ui/';
-    }
-    return config;
-  },
 };
 export default config;

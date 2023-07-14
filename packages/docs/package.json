@@ -11,11 +11,12 @@
     "@storybook/blocks": "^7.0.18",
     "@storybook/react": "^7.0.18",
     "@storybook/react-webpack5": "^7.0.18",
-    "@storybook/storybook-deployer": "^2.8.16",
     "@storybook/testing-library": "^0.0.14-next.2",
+    "chromatic": "^6.19.9",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-docgen": "^6.0.1",
+    "react-docgen-typescript": "^2.2.2",
     "react-docgen-typescript-plugin": "^1.0.5",
     "react-dom": "^18.2.0",
     "storybook": "^7.0.18"
@@ -24,12 +25,13 @@
     "@higherme-ui/eslint-config": "*",
     "@higherme-ui/react": "*",
     "@higherme-ui/tokens": "*",
-    "polished": "^4.2.2",
-    "styled-components": "^6.0.0-rc.6"
+    "polished": "^4.2.2"
   },
   "scripts": {
     "dev": "storybook dev -p 6006",
     "build": "storybook build",
-    "deploy-storybook": "storybook-to-ghpages"
-  }
+    "chromatic": "npx chromatic --build-script-name=build --project-token=chpt_8a7ab8263bb625f"
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "docs@1.0.0"
 }
