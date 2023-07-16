@@ -45,7 +45,7 @@ export const Drawer = ({
   title,
 }: DrawerProps) => {
   return (
-    <RadixDialog.Root>
+    <StyledDrawerRoot>
       <RadixDialog.Trigger asChild>{trigger}</RadixDialog.Trigger>
       <StyledDrawerOverlay>
         <StyledDrawerContent position={position}>
@@ -60,9 +60,13 @@ export const Drawer = ({
           </RadixDialog.Close>
         </StyledDrawerContent>
       </StyledDrawerOverlay>
-    </RadixDialog.Root>
+    </StyledDrawerRoot>
   );
 };
+
+const StyledDrawerRoot = styled(RadixDialog.Root, {
+  zIndex: 2,
+});
 
 const StyledDrawerOverlay = styled(RadixDialog.DialogOverlay, {
   backgroundColor: 'rgba(0, 0, 0, 0.5)',
@@ -74,6 +78,7 @@ const StyledDrawerOverlay = styled(RadixDialog.DialogOverlay, {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
+  zIndex: 2,
 });
 
 const StyledDrawerContent = styled(RadixDialog.DialogContent, {
@@ -97,7 +102,7 @@ const StyledDrawerContainer = styled('div', {
 });
 const StyledIconButton = styled(IconButton, {
   position: 'absolute',
-  top: '$5',
+  top: '$6',
   right: '$4',
 });
 

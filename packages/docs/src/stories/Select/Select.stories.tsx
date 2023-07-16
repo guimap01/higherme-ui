@@ -34,12 +34,6 @@ export const Default: Story = {
       { value: '1', label: 'Option 1' },
       { value: '2', label: 'Option 2' },
       { value: '3', label: 'Option 3' },
-      { value: '1', label: 'Option 1' },
-      { value: '2', label: 'Option 2' },
-      { value: '3', label: 'Option 3' },
-      { value: '1', label: 'Option 1' },
-      { value: '2', label: 'Option 2' },
-      { value: '3', label: 'Option 3' },
     ],
   },
   render: (args: any) => (
@@ -56,12 +50,6 @@ export const Default: Story = {
 export const MultiSelect: Story = {
   args: {
     options: [
-      { value: '1', label: 'Option 1' },
-      { value: '2', label: 'Option 2' },
-      { value: '3', label: 'Option 3' },
-      { value: '1', label: 'Option 1' },
-      { value: '2', label: 'Option 2' },
-      { value: '3', label: 'Option 3' },
       { value: '1', label: 'Option 1' },
       { value: '2', label: 'Option 2' },
       { value: '3', label: 'Option 3' },
@@ -94,6 +82,7 @@ export const WithCheckbox: Story = {
     ],
     showCheckbox: true,
     isMulti: true,
+    hideSelectedOptions: false,
   },
   render: (args: any) => (
     <div
