@@ -1,4 +1,5 @@
-import { RenderResult, render } from '@testing-library/react';
+import { render, RenderResult } from '@testing-library/react';
+
 import { getCssText } from '../../styles';
 
 export const renderWithStyles = (

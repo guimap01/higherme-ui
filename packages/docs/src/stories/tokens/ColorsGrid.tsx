@@ -1,7 +1,6 @@
-import React from 'react';
 import { colors } from '@higherme-ui/tokens';
-
 import { getContrast } from 'polished';
+import React from 'react';
 
 export function ColorsGrid() {
   return Object.entries(colors).map(([name, color]) => (

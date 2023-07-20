@@ -1,5 +1,4 @@
-import { Button, IconSvg } from '@higherme-ui/react';
-import { Dropdown } from '@higherme-ui/react';
+import { Button, Dropdown, IconSvg } from '@higherme-ui/react';
 import { Meta } from '@storybook/react';
 
 const meta: Meta<typeof DropdownStory> = {

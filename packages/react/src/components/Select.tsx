@@ -1,22 +1,23 @@
 import {
   colors,
+  fonts,
   fontSizes,
   fontWeights,
-  fonts,
   lineHeights,
   radii,
   space,
 } from '@higherme-ui/tokens';
 import { useState } from 'react';
 import ReactSelect, {
+  components,
   GroupBase,
   MultiValueGenericProps,
   OptionProps,
   Props,
-  components,
 } from 'react-select';
-import { Tag } from './Tag';
+
 import { styled } from '../styles';
+import { Tag } from './Tag';
 
 type SelectProps<
   Option,

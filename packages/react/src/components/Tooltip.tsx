@@ -1,5 +1,6 @@
-import * as RadixTooltip from '@radix-ui/react-tooltip';
 import { InfoCircledIcon } from '@radix-ui/react-icons';
+import * as RadixTooltip from '@radix-ui/react-tooltip';
+
 import { keyframes, styled } from '../styles';
 import { IconButton } from './Button';
 
@@ -26,9 +27,7 @@ export const Tooltip = ({ content, children }: TooltipProps) => {
     <RadixTooltip.Provider>
       <RadixTooltip.Root>
         <RadixTooltip.Trigger asChild>
-          {children ? (
-            children
-          ) : (
+          {children || (
             <IconButton>
               <InfoCircledIcon />
             </IconButton>

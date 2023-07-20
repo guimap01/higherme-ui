@@ -1,4 +1,4 @@
-import { IconSvg, IconNames, iconNames, Typography } from '@higherme-ui/react';
+import { IconNames, iconNames, IconSvg, Typography } from '@higherme-ui/react';
 import { Meta } from '@storybook/react';
 
 const IconSvgStory = () => (

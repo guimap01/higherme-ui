@@ -1,7 +1,8 @@
 import { render, screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { Drawer } from '../../components/Drawer';
+
 import { Button } from '../../components/Button';
+import { Drawer } from '../../components/Drawer';
 
 describe('Drawer', () => {
   async function openAndReturnDrawer() {
@@ -67,11 +68,11 @@ describe('Drawer', () => {
     const dialog = await openAndReturnDrawer();
     await waitFor(() => {
       expect(
-        within(dialog).getByRole('button', { name: /drawer\-close\-button/i })
+        within(dialog).getByRole('button', { name: /drawer-close-button/i })
       );
     });
     const closeButton = within(dialog).getByRole('button', {
-      name: /drawer\-close\-button/i,
+      name: /drawer-close-button/i,
     });
     userEvent.click(closeButton);
     await waitFor(() => {

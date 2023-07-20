@@ -31,6 +31,7 @@
     "dev": "storybook dev -p 6006",
     "build": "storybook build",
     "build-storybook": "yarn build",
-    "chromatic": "npx chromatic --build-script-name=build --project-token=chpt_8a7ab8263bb625f"
+    "chromatic": "npx chromatic --build-script-name=build --project-token=chpt_8a7ab8263bb625f",
+    "lint": "eslint src --ext .ts,.tsx --fix"
   }
 }

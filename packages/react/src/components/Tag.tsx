@@ -1,5 +1,6 @@
 import { colors } from '@higherme-ui/tokens';
 import { styled } from '@stitches/react';
+
 import { IconNames, IconSvg } from './Icon/IconSvg';
 
 type TagProps = {

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { theme } from '../styles';
 
 /** if a theme color was used - grab it, otherwise (hex, rgb, etc) just return it **/

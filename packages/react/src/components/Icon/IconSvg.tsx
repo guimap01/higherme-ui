@@ -1,12 +1,13 @@
 import { colors } from '@higherme-ui/tokens';
 
+import { resolveColor } from '../../helpers/colors';
 import {
   AddCircle,
-  ArrowLeft,
-  ArrowUp,
+  Alert,
   ArrowCircleLeft,
   ArrowCircleUp,
-  Alert,
+  ArrowLeft,
+  ArrowUp,
   Bell,
   Camera,
   Chat,
@@ -19,8 +20,8 @@ import {
   CircleList,
   Close,
   Copy,
-  Download,
   CrossCircle,
+  Download,
   Edit1,
   Email,
   ExternalLink,
@@ -35,14 +36,14 @@ import {
   List,
   Mail,
   Menu,
+  MinusCircle,
   MoreMenu,
   NotePad,
-  MinusCircle,
   Notifications,
-  Phone,
   OrderDown,
   OrderUp,
   Pencil,
+  Phone,
   Pin1,
   Printer,
   QuestionCircle,
@@ -54,13 +55,12 @@ import {
   Star,
   TextFile,
   Trash,
-  UserCircle,
   Upload,
+  UserCircle,
   VerticalDots,
   XCircle,
   XEye,
 } from './vectors';
-import { resolveColor } from '../../helpers/colors';
 
 const viewBoxObj = {
   addCircle: '0 0 24 24',
@@ -188,7 +188,7 @@ export type IconNames = keyof typeof viewBoxObj;
 
 export const iconNames = Object.keys(viewBoxObj) as IconNames[];
 
-type IconSvg = {
+type IconSvgProps = {
   className?: string;
   name: keyof typeof viewBoxObj;
   color?: keyof typeof colors;
@@ -208,7 +208,7 @@ export const IconSvg = ({
   viewBox,
   width,
   opacity,
-}: IconSvg) => {
+}: IconSvgProps) => {
   return (
     <svg
       className={className}

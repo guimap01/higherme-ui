@@ -1,7 +1,8 @@
+import { colors } from '@higherme-ui/tokens';
 import { styled } from '@stitches/react';
 import React, { InputHTMLAttributes, useState } from 'react';
+
 import { IconNames, IconSvg } from './Icon/IconSvg';
-import { colors } from '@higherme-ui/tokens';
 
 type InputProps = InputHTMLAttributes<HTMLInputElement>;
 
